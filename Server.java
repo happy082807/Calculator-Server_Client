@@ -14,7 +14,7 @@ public class Server{
 		try{
 			SS = new ServerSocket(port);
 			System.out.println("Server is created and waiting for Client to connect...");
-			System.out.println("IP address : " + SS.getLocalSocketAddress());
+			System.out.println("IP address : " + InetAddress.getLocalHost().getHostAddress());
 			
 			while(true){
 				threadexec.execute(new Serverthread(SS.accept()));
